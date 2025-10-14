@@ -1,0 +1,68 @@
+.navbar {
+  background: #fff;
+  height: 80px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  box-sizing: border-box;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  padding: 0 24px;
+  max-width: 1200px;
+}
+
+.navbar-logo {
+  color: #1c1e21;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  height: 80px;
+}
+
+.nav-links {
+  color: #606770;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease-out;
+}
+
+.nav-links:hover {
+  color: #1877f2;
+  border-bottom: 3px solid #1877f2;
+}
+
+/* Classe adicionada pelo NavLink quando a rota está ativa */
+.nav-links.activated {
+  color: #1877f2;
+  border-bottom: 3px solid #1877f2;
+}
