@@ -33,3 +33,22 @@
   border-top: 1px solid #e9ebee;
   padding-top: 12px;
 }
+
+/* Adicionar ao final de Post.css */
+
+@media (max-width: 768px) {
+  .post-card {
+    padding: 16px;
+    border-left-width: 4px; /* Borda um pouco mais fina */
+  }
+
+  .post-title {
+    font-size: 1.25rem; /* Título menor */
+  }
+
+  .post-meta {
+    flex-direction: column; /* Empilha os metadados */
+    align-items: flex-start;
+    gap: 8px; /* Adiciona um espaço entre os itens empilhados */
+  }
+}

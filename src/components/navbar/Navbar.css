@@ -1,3 +1,4 @@
+/* Navbar.css (versão responsiva) */
 .navbar {
   background: #fff;
   height: 80px;
@@ -7,7 +8,6 @@
   align-items: center;
   font-size: 1.2rem;
   position: sticky;
-  box-sizing: border-box;
   top: 0;
   z-index: 999;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -61,8 +61,64 @@
   border-bottom: 3px solid #1877f2;
 }
 
-/* Classe adicionada pelo NavLink quando a rota está ativa */
 .nav-links.activated {
   color: #1877f2;
   border-bottom: 3px solid #1877f2;
+}
+
+.menu-icon {
+  display: none; /* Escondido em telas grandes */
+}
+
+/* --- Media Query para Responsividade --- */
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column; /* Itens um abaixo do outro */
+    width: 100%;
+    height: calc(100vh - 80px);
+    position: absolute;
+    top: 80px;
+    left: -100%; /* Começa fora da tela */
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  /* Classe que será adicionada/removida com JavaScript */
+  .nav-menu.active {
+    background: #fff;
+    left: 0; /* Move o menu para dentro da tela */
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    background-color: #f0f2f5;
+    color: #1877f2;
+    border-radius: 0;
+    border-bottom: none; /* Remove a borda inferior no modo mobile */
+  }
+  
+  .nav-links.activated {
+    border-bottom: none;
+  }
+
+  .nav-item {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu-icon {
+    display: block; /* Mostra o ícone em telas pequenas */
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
 }

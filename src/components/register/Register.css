@@ -96,3 +96,34 @@
   text-align: center;
   margin-bottom: 20px;
 }
+
+
+/* Adicionar ao final de Login.css e Register.css */
+
+/* Para telas com largura máxima de 768px (tablets e celulares) */
+@media (max-width: 768px) {
+  .login-container,
+  .register-container {
+    /* Reduz o padding vertical em telas menores */
+    padding: 20px 0;
+    /* Garante que o container não tenha altura mínima fixa que quebre o layout */
+    min-height: auto; 
+    height: calc(100vh - 80px); /* Ocupa a altura da viewport menos o navbar */
+  }
+
+  .login-form,
+  .register-form {
+    /* Remove a sombra para um visual mais clean em mobile */
+    box-shadow: none; 
+    /* Faz o formulário ocupar quase toda a largura, com pequenas margens */
+    width: 90%; 
+    max-width: none; /* Remove a largura máxima fixa */
+    /* Reduz o padding interno */
+    padding: 24px; 
+  }
+
+  .login-form h2,
+  .register-form h2 {
+    font-size: 1.5rem; /* Diminui o tamanho do título */
+  }
+}

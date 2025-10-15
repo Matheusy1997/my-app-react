@@ -66,3 +66,16 @@
   color: #fa383e;
   margin-bottom: 12px;
 }
+
+/* Adicionar ao final de CreatePostForm.css */
+
+@media (max-width: 768px) {
+  .create-post-container {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .create-post-container h3 {
+    font-size: 1.25rem;
+  }
+}
