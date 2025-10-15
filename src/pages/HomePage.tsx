@@ -26,7 +26,7 @@ const HomePage = () => {
       }
 
       try {
-        const response = await api.get('http://localhost:3000/api/posts');
+        const response = await api.get('/posts');
 
         setPosts(response.data); // Salva os posts recebidos no estado
 
