@@ -3,7 +3,7 @@ import axios from "axios";
 const api = axios.create({
   // Definimos a URL base para todas as requisições
   // O front-end (Vite) roda na porta 5173, e o back-end na 3000
-  baseURL: "https://back-end-1tos.onrender.com/api",
+  baseURL: import.meta.env.VITE_API_URL,
 });
 
 api.interceptors.request.use(
